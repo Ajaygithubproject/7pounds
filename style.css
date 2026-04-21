@@ -188,7 +188,18 @@ footer{background:#0f0a1e;padding:26px 22px;text-align:center}
 .wa{position:fixed;bottom:22px;right:18px;width:56px;height:56px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,0.5);text-decoration:none;z-index:999;animation:fl 3s ease-in-out infinite}
 @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .wa i{font-size:26px;color:#fff}
-
+.premium-text {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: #1e1e2f3f;
+  color: #ffffff;
+   font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.16);
+}
 /* PRIMARY BUTTON */
 .btn.primary {
     display: block;
