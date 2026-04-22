@@ -8,33 +8,48 @@ document.querySelectorAll('.btn').forEach(btn => {
         }, 150);
     });
 });
-document.getElementById("payBtn").onclick = function(e){
-    e.preventDefault();
 
-    var options = {
-        "key": "YOUR_RAZORPAY_KEY", // 🔴 Replace with your key
-        "amount": 130800, // 1308 Rs (in paise)
-        "currency": "INR",
-        "name": "Seven Pounds",
-        "description": "Consultation Fee",
-        "image": "",
+ document.getElementById("payBtn").addEventListener("click", function () {
 
-        "handler": function (response){
-            alert("Payment Successful!");
-            window.location.href = "https://wa.me/918925856553";
-        },
+    const upiID = "ajayromeyo1202@oksbi";
+    const name = "Ajay Kumar";
+    const amount = "7";
+    const note = "Consultation Fee";
 
-        "prefill": {
-            "name": "",
-            "email": "",
-            "contact": ""
-        },
+    const upiURL = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR&tn=${encodeURIComponent(note)}`;
 
-        "theme": {
-            "color": "#c40000"
-        }
-    };
+    window.location.href = upiURL;
 
-    var rzp = new Razorpay(options);
-    rzp.open();
-};
+  });
+
+
+// document.getElementById("payBtn").onclick = function(e){
+//     e.preventDefault();
+
+//     var options = {
+//         "key": "YOUR_RAZORPAY_KEY", // 🔴 Replace with your key
+//         "amount": 130800, // 1308 Rs (in paise)
+//         "currency": "INR",
+//         "name": "Seven Pounds",
+//         "description": "Consultation Fee",
+//         "image": "",
+
+//         "handler": function (response){
+//             alert("Payment Successful!");
+//             window.location.href = "https://wa.me/918925856553";
+//         },
+
+//         "prefill": {
+//             "name": "",
+//             "email": "",
+//             "contact": ""
+//         },
+
+//         "theme": {
+//             "color": "#c40000"
+//         }
+//     };
+
+//     var rzp = new Razorpay(options);
+//     rzp.open();
+// };
