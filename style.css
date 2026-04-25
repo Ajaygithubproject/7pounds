@@ -262,3 +262,34 @@ footer{background:#0f0a1e;padding:26px 22px;text-align:center}
 #payBtn:active {
     transform: scale(0.95);
 }
+
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 14px;   /* ↓ reduced size */
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 255, 255, 0);
+  backdrop-filter: blur(px);
+  color: #fff;
+  font-size: 18px;     /* ↓ smaller text */
+  font-weight: 500;
+  width: fit-content;  /* auto width */
+}
+
+/* Green dot */
+.live-dot {
+  width: 15px;
+  height: 15px;
+  background: #00ff9d;
+  border-radius: 50%;
+  animation: livePulse 1.5s infinite;
+}
+
+/* Pulse animation */
+@keyframes livePulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,255,157,0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(0,255,157,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,255,157,0); }
+}
