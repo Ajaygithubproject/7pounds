@@ -29,9 +29,8 @@
       <div class="hero-pill"><i class="fa-solid fa-shield-halved"></i> Trusted EMI &amp; Debt Experts</div>
       <h1>Break Free<br>from <span class="hl">Debt Traps.</span></h1>
       <p class="hero-desc">Drowning in EMIs &amp; loans? We negotiate with banks, restructure your debt, and put ₹5,000 back in your pocket every 6 months.</p>
-    <a href="#" id="payBtn" class="btn primary">
-    Pay & Get Consultation
-</a>      <a href="#plan" class="btn-ghost"><i class="fa-solid fa-circle-play"></i> &nbsp;See How It Works</a>
+      <button id="payBtn">Pay for consultation</button>
+          <a href="#plan" class="btn-ghost"><i class="fa-solid fa-circle-play"></i> &nbsp;See How It Works</a>
     </div>
 
     <div class="hero-stats">
@@ -254,7 +253,11 @@
 <a href="https://wa.me/918925856552" class="wa" aria-label="WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+document.getElementById("payBtn").addEventListener("click", function () {
+    window.location.href = "https://rzp.io/rzp/lKxM7lS";
+});
+</script>
 <script src="script.js"></script>
 
 </body>
